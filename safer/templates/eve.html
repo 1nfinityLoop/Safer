@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+
+		<div id="colorlib-about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<img class="img-responsive" src="{{ event.image.url }}" alt="Free HTML5 Bootstrap Template by colorlib.com">
+					</div>
+					<div class="col-md-6">
+						<div class="about animate-box">
+							<h2>{{ object.title }}</h2>
+							<p class="price-room">{{ object.price }}$<p>
+							<i class="fas fa-map-marker-alt fa-2x"></i>
+							<p><i class="glyphicon glyphicon-globe"></i>&nbsp;{{ object.ville }} , {{ object.pays }} <p>
+							<p><i class="glyphicon glyphicon-pushpin"></i>&nbsp;{{ object.adress }} <p>
+							<p><i class="glyphicon glyphicon-earphone"></i>&nbsp;{{ object.phone }} <p>
+
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+{% endblock %}

@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="colorlib-rooms" class="colorlib-light-grey">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
+						<h2>{{ object.ville}}</h2>
+					</div>
+				</div>
+
+
+
+				<!-- boucle -->
+				<div id="colorlib-about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<img class="img-responsive" src="{{ object.image.url }}" alt="Free HTML5 Bootstrap Template by colorlib.com">
+					</div>
+					<div class="col-md-6">
+						<div class="about animate-box">
+							<h2>{{ object.title }}</h2>
+							<p>{{ object.content }}<p>
+
+							<p><i class="glyphicon glyphicon-globe"></i>&nbsp;{{ object.ville }} , {{ object.pays }} <p>
+							<p><i class="glyphicon glyphicon-pushpin"></i>&nbsp;{{ object.adress }} <p>
+
+
+							<p><i class="glyphicon glyphicon-earphone"></i>&nbsp;{{ object.phone }} <p>
+
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+			</div>
+		</div>
+
+{% ifequal object.pays "espagne" %}
+
+
+<h2 align="center" style="font-family:'Trebuchet MS', 'Helvetica, sans-serif';"><b>Check this out!! you will need it</b> </h2>
+
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Espagnol</th>
+      <th scope="col">Parlé</th>
+      <th scope="col">Francais</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Hola !</td>
+      <td>(òla) </td>
+      <td>Salut ! (ou bonjour décontracté)</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Buenos dias</td>
+      <td>(bouénoss diass) </td>
+      <td> Bonjour</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Buenas tardes</td>
+      <td>(buénass tardess)</td>
+      <td>Bon après-midi / Bonsoir</td>
+    </tr>
+		<tr>
+      <th scope="row">4</th>
+      <td>Adiòs</td>
+      <td>(adioss)  </td>
+      <td>Au revoir</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>si / no</td>
+      <td>si / no</td>
+      <td> oui / non</td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>Por favor </td>
+      <td>Por favor </td>
+      <td>S'il vous plaît</td>
+    </tr>
+		<tr>
+      <th scope="row">7</th>
+      <td>Disculpe (la molestia) </td>
+      <td>(dizcoulpé la moleztïa) </td>
+      <td>Excusez-moi de vous déranger</td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td>Encantado/a</td>
+      <td>(é'nca'ntado)</td>
+      <td>Enchanté(é)</td>
+    </tr>
+	<tr>
+      <th scope="row">9</th>
+      <td>Cuanto cuesta ? </td>
+      <td>coua'nto couésta) </td>
+      <td>Combien ça coûte ?</td>
+    </tr>
+	<tr>
+		<th scope="row">10</th>
+		<td>Quisiera reservar una mesa para XX personas a las siete/ocho/nueve.</td>
+		<td> (kiziera résservar una méssa para xx pérsso'nass a lass siété/ocho/nuévé)  </td>
+		<td>J'aimerais réserver une table pour xx personnes à sept heures / huit heures / neuf heures.</td>
+	</tr>
+	<tr>
+      <th scope="row">11</th>
+      <td>Fué un placer conocerlo / conocerte</td>
+      <td>foué oun plazér conozérlo /conozérté</td>
+      <td>J'ai été ravi de vous renconter / de te rencontrer.</td>
+    </tr>
+	<tr>
+		<th scope="row">12</th>
+		<td>Quedese con la vuelta</td>
+		<td>(kédésé con la vouélta)  </td>
+		<td>Gardez la monnaie.</td>
+	</tr>
+	<tr>
+		<th scope="row">13</th>
+		<td>Aceptan las tarjetas de crédito ? </td>
+		<td>Aceptan las tarjetas de crédito ? </td>
+		<td>Acceptez-vous les cartes de crédit ?</td>
+	</tr>
+	<tr>
+		<th scope="row">14</th>
+		<td> Nos podria traer agua/ hielo / pàn / la cuenta, por favor ?</td>
+		<td>Noss podrïa traér agoua / ïélo / pa'n / la cuénta, por fabor ?</td>
+		<td>On pourrait avoir de l'eau / des glaçons / du pain / l'addition, s'il vous plaît ?</td>
+	</tr>
+	<tr>
+		<th scope="row">15</th>
+		<td> Que aconsejas ? </td>
+		<td> / </td>
+		<td>Qu'est ce que vous me recommandez ?</td>
+	</tr>
+  </tbody>
+</table>
+{% endifequal %}
+
+		{% endblock %}

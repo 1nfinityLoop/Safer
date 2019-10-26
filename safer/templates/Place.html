@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="colorlib-amenities">
+	<div id="colorlib-reservation">
+			<div class="col-md-12 search-wrap">
+				<form method="GET" class="colorlib-form">
+		              	<div class="row">
+		                <div class="col-md-3">
+		                  <div class="form-group">
+		                    <label >Ville :</label>
+		                    <div class="form-field">
+		                      <input type="text" name='q' value='{{ request.GET.q }}'  class="form-control " placeholder="Paris Londre ...">
+		                    </div>
+		                  </div>
+		                </div>
+
+
+
+		                <div class="col-md-2">
+		                  <input type="submit" name="submit" id="submit" value="Recherche" class="btn btn-primary btn-block">
+		                </div>
+		              </div>
+		            </form>
+
+
+			</div>
+					</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="amenities-flex">
+						<div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
+							<h2>ENDROITS</h2>
+						</div>
+
+
+
+
+						{% for place in places %}
+						<br>
+						<div class="amenities-img animate-box" style="background-image: url({{ place.image.url }});margin-top: 15px"></div>
+
+						<div class="desc animate-box" style="margin-top: 15px">
+							<h2><a href="/static/#">{{ place.title }}</a></h2>
+							<p class="price">
+								<span class="price-room">{{ place.ville }}</span>
+								<span class="per">{{ place.adress }}</span>
+							</p>
+							<p> {{ place.content }}</p>
+						</div>
+							{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+				{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+		<div id="colorlib-rooms" class="colorlib-light-grey">
+			<div class="container">
+				<div class="row">
+					{% for event in events %}
+					<div class="col-md-4 room-wrap animate-box">
+						<a href="{{ event.image.url}}" class="room image-popup-link" style="background-image: url({{ event.image.url }});"></a>
+						<div class="desc text-center">	<h3><a href="{% url 'eve' event.pk  %}">{{ event.title }}</a></h3>
+							<p class="price">
+								<span class="currency">$</span>
+								<span class="price-room">{{ event.price }}</span>
+							</p>
+							<ul>
+								<li><i class="fas fa-map-marker-alt fa-2x"></i>{{ event.ville }}</li>
+								<li><i class="icon-check"></i> Breakfast included</li>
+								<li> {{event.adress }}</li>
+							</ul>
+							<p><a class="btn btn-primary" href="{% url 'eve' event.pk  %}"> see more!</a></p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+
+{% endblock %}
